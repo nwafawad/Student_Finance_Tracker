@@ -9,6 +9,9 @@ Watch a quick introduction and walkthrough of the Student Finance Tracker:
 
 ## 🌟 Features
 
+🔗 **[Live Demo](https://nwafawad.github.io/Student_Finance_Tracker/#about)** - Try it now!
+
+
 ### Core Functionality
 - **Add/Edit/Delete Records**: Manage financial transactions with detailed information (description, amount, category, date)
 - **Smart Categorization**: Organize expenses into predefined categories:
