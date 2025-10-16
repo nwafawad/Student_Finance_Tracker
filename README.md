@@ -1,6 +1,11 @@
 # Student Finance Tracker 💰
 
 A simple yet powerful web application designed to help students manage their personal finances effectively. Track expenses, monitor budgets, and gain insights into spending habits - all within a clean, user-friendly interface.
+## 📹 Introduction Video
+
+Watch a quick introduction and walkthrough of the Student Finance Tracker:
+
+[![Introduction Video](https://img.shields.io/badge/Watch-Introduction%20Video-blue?style=for-the-badge&logo=loom)](https://www.loom.com/share/50612981222b4ac29fd35f41297e256b?sid=91fe25b7-5dc8-4d20-86e4-787061a20a9d)
 
 ## 🌟 Features
 
