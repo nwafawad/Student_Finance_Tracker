@@ -9,7 +9,7 @@ Watch a quick introduction and walkthrough of the Student Finance Tracker:
 
 ## 🌟 Features
 
-🔗 **[Live Demo](https://nwafawad.github.io/Student_Finance_Tracker/#about)** - Try it now!
+# 🔗 **[Live Demo](https://nwafawad.github.io/Student_Finance_Tracker/#dashboard)** - Try it now!
 
 
 ### Core Functionality
