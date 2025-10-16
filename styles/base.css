@@ -1,0 +1,141 @@
+/* styles/base.css */
+/* Visually hide an element, but keep it accessible to screen readers */
+:root {
+    --primary-color: #2a86e9;
+    --primary-hover: #045bb9;
+    --text-color: #211f1f;
+    --background-color: #ffffff96;
+    --header-bg: #cbdaea;
+    --border-color: #d1d9e2;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Main Content Wrapper */
+main {
+    padding: 2rem;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(17, 16, 16, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Navigation Styles - Inline */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--primary-hover);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* mobile devices */
+
+/* Mobile devices - 360px and below */
+@media (max-width: 360px) {
+    header {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header {
+        padding: 1.25rem 3rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance Tracker</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Finance Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#form">Add/Edit</a></li>
+                <li><a href="#records">Records</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div id="ariaAnnouncer" aria-live="polite" class="sr-only"></div>
+    </header>
+
+    <main>
+        <section id="records">
+            <h2>All Records</h2>
+            <div class="controls">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Enter text or regex...">
+            </div>
+            <table>
+                <thead>
+                    <th data-sort="date">Date ↕️</th>
+                    <th data-sort="description">Description ↕️</th>
+                    <th data-sort="category">Category ↕️</th>
+                    <th data-sort="amount">Amount ↕️</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody id="recordsTableBody">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="form">
+            <h2>Add/Edit Record</h2>
+            <form id="addEditForm" novalidate>
+                <div class="form-field">
+                    <label for="formDescription">Description</label>
+                    <input type="text" id="formDescription" required>
+                    <span class="error-message" id="errorDescription"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="formAmount">Amount</label>
+                    <input type="number" id="formAmount" placeholder="e.g., 12.50" step="0.01" min="0" required>
+                    <span class="error-message" id="errorAmount"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="formDate">Date</label>
+                    <input type="date" id="formDate" required>
+                    <span class="error-message" id="errorDate"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="formCategory">Category</label>
+                    <select id="formCategory" required>
+                        <option value="">--Please choose a category--</option>
+                        <option>Food</option>
+                        <option>Housing/Utilities</option>
+                        <option>Transport</option>
+                        <option>Entertainment</option>
+                        <option>Fees</option>
+                        <option>Other</option>
+                    </select>
+                    <span class="error-message" id="errorCategory"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Save Record</button>
+                    <button type="button">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="dashboard">
+            <h2>Dashboard & Stats</h2>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>💰 Monthly Budget</h3>
+                    <p id="statBudget">RWF 0.00</p>
+                    <span class="stat-label">Set in Settings</span>
+                </div>
+                <div class="stat-card">
+                    <h3>📊 Week Spending</h3>
+                    <p id="statWeekSpending">RWF 0.00</p>
+                    <span class="stat-label">Last 7 days</span>
+                </div>
+                <div class="stat-card">
+                    <h3>💵 Balance</h3>
+                    <p id="statBalance">RWF 0.00</p>
+                    <span class="stat-label">Budget - Spending</span>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <a href="#form" class="dashboard-btn dashboard-btn-primary">
+                    <span class="btn-icon">➕</span>
+                    Add New Record
+                </a>
+                <a href="#records" class="dashboard-btn dashboard-btn-secondary">
+                    <span class="btn-icon">📋</span>
+                    View All Records
+                </a>
+            </div>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="budgetCapInput">Monthly Budget Cap (RWF):</label>
+                <input type="number" id="budgetCapInput" placeholder="e.g., 500" min="0" step="10">
+                <div id="budgetStatusDisplay" class="budget-status-display" style="display: none;">
+                    <p id="budgetStatusText"></p>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <h3>Data Management</h3>
+                <button id="exportDataBtn">Export Data as JSON</button>
+            </div>
+            <div class="setting-item" id="importSection">
+                <label for="importDataInput">Import Data from JSON File:</label>
+                <input type="file" id="importDataInput" accept=".json">
+                <p id="importStatus"></p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>This Student Finance Tracker is a simple web application designed to help students manage their finances
+                effectively.
+                It allows users to add, edit, and delete financial records, view statistics, and set budget limits.</p>
+            <p>Developed by Nawaf Ahmed.</p>
+            <p><a href="https://github.com/nwafawad/Student-finance-tracker.git" target="_blank">GitHub Repository</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nawaf Ahmed.</p>
+    </footer>
+    <script src="scripts/storage.js" defer></script>
+    <script src="scripts/state.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/validators.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+    <script src="scripts/charts.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>

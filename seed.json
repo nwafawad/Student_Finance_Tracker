@@ -1,0 +1,38 @@
+[
+    {
+        "id": "rec_0001",
+        "description": "Lunch at cafeteria",
+        "amount": 12.50,
+        "category": "Food",
+        "date": "2025-10-12",
+        "createdAt": "2025-10-12T10:00:00Z",
+        "updatedAt": "2025-10-12T10:00:00Z"
+    },
+    {
+        "id": "rec_0002",
+        "description": "Netflix subscription",
+        "amount": 10,
+        "category": "Entertainment",
+        "date": "2025-10-13",
+        "createdAt": "2025-10-13T14:30:00Z",
+        "updatedAt": "2025-10-13T14:30:00Z"
+    },
+    {
+        "id": "rec_0003",
+        "description": "Bus pass",
+        "amount": 45.00,
+        "category": "Transport",
+        "date": "2025-10-11",
+        "createdAt": "2025-10-11T08:00:00Z",
+        "updatedAt": "2025-10-11T08:00:00Z"
+    },
+    {
+        "id": "rec_0004",
+        "description": "Coffee with friends",
+        "amount": 9,
+        "category": "Entertainment",
+        "date": "2025-10-11",
+        "createdAt": "2025-10-11T16:00:00Z",
+        "updatedAt": "2025-10-11T16:00:00Z"
+    }
+]
